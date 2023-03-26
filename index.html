@@ -4,6 +4,7 @@
     </head>
     <body>
 	<div id="app"></div>
+	<p id="result"></p>
 	<script type="text/javascript">
 		document.addEventListener('DOMContentLoaded', function(){ 
     			//console.log( "ready!" );
@@ -14,7 +15,8 @@
     					console.log(data);
 					var parse  = JSON.parse(data);
 					console.log(parse);
-					alert(parse);
+					document.getElementById("result").innerHTML = data;
+					//alert(data);
 					var location = parse.address.city+','+parse.address.state_district
 				}
 		
